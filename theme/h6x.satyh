@@ -212,7 +212,7 @@ end = struct
 
       let gr-logo =
         let ctx = ctx |> config#font-slide-title |> set-text-color config#color-bg in
-        let logo = { \fig-inline(include-image 100pt `./theme/fig/full_logo.pdf`); } in
+        let logo = { \fig-inline(include-image 100pt `fig/full_logo.pdf`); } in
         let ib = read-inline ctx logo in
         let pos = (xrel 0.5, 12pt) in
         SlydifiGraphics.put-text
@@ -248,7 +248,7 @@ end = struct
 
       let gr-logo =
         let ctx = ctx |> config#font-slide-title |> set-text-color config#color-bg in
-        let logo = { \fig-inline(include-image 100pt `./theme/fig/white_full_logo.pdf`); } in
+        let logo = { \fig-inline(include-image 100pt `fig/white_full_logo.pdf`); } in
         let ib = read-inline ctx logo in
         let pos = (xrel 0.5, yrel title-yrel +' logo-mgn) in
         SlydifiGraphics.put-text
