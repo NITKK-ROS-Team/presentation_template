@@ -3,7 +3,7 @@ This presentation template is powered by
 - [SATySFi](https://github.com/gfngfn/SATySFi)
 - [SLyDIFi](https://github.com/monaqa/slydifi)
 
-![sample](./example/main.jpg)
+![sample](./example/main.png)
 
 ## Setup
 ### Install SATySFi
