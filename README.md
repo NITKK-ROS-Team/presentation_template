@@ -1,4 +1,4 @@
-# HarvestX Presentation Template
+# Presentation Template
 This presentation template is powered by
 - [SATySFi](https://github.com/gfngfn/SATySFi)
 - [SLyDIFi](https://github.com/monaqa/slydifi)
@@ -11,8 +11,7 @@ Install SATySFi with the following instruction described in the original readme.
 ### Install SLyDIFi
 SLyDIFi-related resources can be installed by the setup script.
 ```zsh
-git clone git@github.com:HarvestX/presentation_template.git
-presentation_template/setup.sh
+git clone https://github.com/NITKK-ROS-Team/presentation_template.git
 ```
 
 ## Generate PDF
