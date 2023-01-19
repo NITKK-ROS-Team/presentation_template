@@ -28,3 +28,4 @@ make
 - satysfi-language-server
   - https://github.com/monaqa/satysfi-language-server
 
+https://zenn.dev/monaqa/articles/2021-12-17-satysfi-slydifi-create-slide

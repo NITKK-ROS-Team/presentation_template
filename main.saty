@@ -1,7 +1,7 @@
 @require: base/color-ext
 @require: enumitem/enumitem
 @require: figbox/figbox
-@import: theme/h6x
+@import: theme/rosteam
 
 open FigBox
 open SlydifiOverlay
@@ -13,9 +13,9 @@ in
 
 document '<
   +make-title(|
-    title = {|HarvesX スライドテンプレート|};
-    author = {|Aoi WATANABE|};
-    date = {| 2022 / 11 / 19 |};
+    title = {|スライドテンプレート|};
+    author = {|NITK.K ROS-Team|};
+    date = {| 2023 / 01 / 19 |};
   |);
 
 

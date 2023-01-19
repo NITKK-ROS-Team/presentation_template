@@ -30,6 +30,7 @@ type h6x-config = (|
   color-emph : color;
   color-link : color;
   color-title : color;
+  color-white : color;
   color-separator : color;
   color-section-ribbon : color;
   color-section-ribbon-intersect : color;
@@ -132,7 +133,7 @@ end = struct
       font-code = SlydifiScheme.apply-font-cfg [code-font];
       font-slide-title = SlydifiScheme.apply-font-cfg [bold-font; set-font-metrics 30pt];
       font-slide-author = SlydifiScheme.apply-font-cfg [default-font; set-font-metrics 24pt;];
-      font-slide-date = SlydifiScheme.apply-font-cfg [default-font; set-font-metrics 20pt;];
+      font-slide-date = SlydifiScheme.apply-font-cfg [default-font; set-font-metrics 12pt;];
       font-section-title = SlydifiScheme.apply-font-cfg [bold-font; set-font-metrics 28pt];
       font-frame-title = SlydifiScheme.apply-font-cfg [bold-font; set-font-metrics 28pt];
       font-pagenum = SlydifiScheme.apply-font-cfg [default-font; set-font-metrics 12pt;];
@@ -140,12 +141,13 @@ end = struct
 
       color-bg = Color.of-css `#FFFFFF`;
       color-fg = Color.of-css `#404040`;
-      color-emph = Color.of-css `#D6315A`;
+      color-emph = Color.of-css `#0064FF`;
       color-link = Color.of-css `#2D539E`;
-      color-title = Color.of-css `#D6315A`;
-      color-separator = Color.of-css `#D6315A`;
-      color-section-ribbon = Color.of-css `#D6315A`;
-      color-section-ribbon-intersect = Color.of-css `#DBA1B0`;
+      color-title = Color.of-css `#0064FF`;
+      color-white = Color.of-css `#FFFFFF`;
+      color-separator = Color.of-css `#0064FF`;
+      color-section-ribbon = Color.of-css `#0064FF`;
+      color-section-ribbon-intersect = Color.of-css `#00E4FF`;
 
       length-frame-title-height = 36pt;
       length-frame-title-left-margin = 12pt;
@@ -212,9 +214,9 @@ end = struct
 
       let gr-logo =
         let ctx = ctx |> config#font-slide-title |> set-text-color config#color-bg in
-        let logo = { \fig-inline(include-image 100pt `fig/full_logo.pdf`); } in
+        let logo = { \fig-inline(include-image 40pt `fig/full_logo.pdf`); } in
         let ib = read-inline ctx logo in
-        let pos = (xrel 0.5, 12pt) in
+        let pos = (xrel 0.95, yrel 0.89) in
         SlydifiGraphics.put-text
           (0.5, 0.0) pos ib
       in
@@ -230,7 +232,7 @@ end = struct
       let title-mgn = 32pt in
       let title-yrel = 0.40 in
       let logo-mgn = 12pt in
-      let date-yrel = 0.12 in
+      let date-yrel = 0.95 in
 
       let gr-bgs = [
         Gr.rectangle (0pt, yrel title-yrel) (xrel 1.0, yrel 1.0) |> fill config#color-title;
@@ -248,9 +250,9 @@ end = struct
 
       let gr-logo =
         let ctx = ctx |> config#font-slide-title |> set-text-color config#color-bg in
-        let logo = { \fig-inline(include-image 100pt `fig/white_full_logo.pdf`); } in
+        let logo = { \fig-inline(include-image 50pt `fig/full_logo.pdf`); } in
         let ib = read-inline ctx logo in
-        let pos = (xrel 0.5, yrel title-yrel +' logo-mgn) in
+        let pos = (xrel 0.93, yrel 0.05) in
         SlydifiGraphics.put-text
           (0.5, 0.0) pos ib
       in
@@ -265,9 +267,9 @@ end = struct
       in
 
       let gr-date =
-        let ctx = ctx |> config#font-slide-date |> set-text-color config#color-fg in
+        let ctx = ctx |> config#font-slide-date |> set-text-color config#color-white in
         let iblst = content#date |> List.map (read-inline ctx) in
-        let pos = (xrel 0.5, yrel date-yrel) in
+        let pos = (xrel 0.9, yrel date-yrel) in
         SlydifiGraphics.put-texts
           (| align = (0.5, 1.0); text-align = 0.5; leading = (get-font-size ctx *' 1.6) |)
             pos iblst
