@@ -3,8 +3,6 @@ This presentation template is powered by
 - [SATySFi](https://github.com/gfngfn/SATySFi)
 - [SLyDIFi](https://github.com/monaqa/slydifi)
 
-[![sample](./example/main.png)](./example/main.pdf)
-
 ## Setup
 ### Install SATySFi
 Install SATySFi with the following instruction described in the original readme.
@@ -18,7 +16,7 @@ presentation_template/setup.sh
 ```
 
 ## Generate PDF
-```zsh
+```sh
 make
 ```
 
